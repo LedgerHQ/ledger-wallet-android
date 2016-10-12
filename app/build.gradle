@@ -72,7 +72,7 @@ dependencies {
     compile "org.scala-lang:scala-library:2.11.7"
     compile 'me.dm7.barcodescanner:zbar:1.6'
     compile 'com.android.support:recyclerview-v7:22.2.+'
-    compile 'com.koushikdutta.async:androidasync:2.1.+'
+    compile 'com.koushikdutta.async:androidasync:2.1.0'
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.madgag.spongycastle:core:1.51.0.0'
     compile 'com.madgag.spongycastle:prov:1.51.0.0'
@@ -100,7 +100,7 @@ tasks.withType(ScalaCompile) {
 tasks.withType(ScalaCompile) {
     configure(scalaCompileOptions.forkOptions) {
         memoryMaximumSize = '1g'
-        jvmArgs = ['-XX:MaxPermSize=512m']
+//        jvmArgs = ['-XX:MaxPermSize=512m']
     }
 }
 tasks.withType(ScalaCompile) {
