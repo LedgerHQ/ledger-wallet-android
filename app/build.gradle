@@ -5,7 +5,9 @@ apply plugin: "jp.leafytree.android-scala"
 android {
     compileSdkVersion 23
 
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "23.0.3"
+
+    useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
         applicationId "co.ledger.wallet"
@@ -119,7 +121,7 @@ tasks.withType(ScalaCompile) {
 tasks.withType(ScalaCompile) {
     configure(scalaCompileOptions.forkOptions) {
         memoryMaximumSize = '1g'
-        jvmArgs = ['-XX:MaxPermSize=512m']
+//        jvmArgs = ['-XX:MaxPermSize=512m']
     }
 }
 tasks.withType(ScalaCompile) {
